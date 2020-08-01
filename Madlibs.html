@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    
+    <script>
+        function mad(){
+            var Propernoun = document.getElementById("Propernoun").value;
+            var noun = document.getElementById("noun").value;
+            var adjective = document.getElementById("adjective").value;
+            var noun2 = document.getElementById("pluralnoun").value;
+             var noun3 = document.getElementById("pluralnoun2").value;
+            var sentence = Propernoun + " sat on a(n) " + noun + Propernoun + " had a " + adjective + " fall, all the king's " + pluralnoun + " and all the king's " + pluralnoun2 + " couldn't put " + Propernoun + " together again "
+            document.getElementById("madlib").innerHTML = sentence;
+        }
+        
+    
+
+    
+    
+    
+    
+    
+    
+    </script> 
+    <style>
+    
+        body {
+            text-align: center;
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </style>
+    
+</head>
+
+<body>
+    <label> Proper noun </label>
+    <input id = "Propernoun"/>
+    
+    <br/>
+    <br/>
+    
+    <label> Noun </label>
+    <input id = "noun"/>
+
+    <br/>         
+    <br/>                                                             
+    
+    <label> Adjective </label>
+    <input id = "adjective"/>
+   
+    <br/>
+    <br/>
+    
+    <label> Plural Noun </label>
+    <input id = "pluralnoun"/>
+    
+    <br/>
+    <br/>
+    
+    <label> Plural Noun </label>
+    <input id = "pluralnoun2"/>
+    
+    <br/>
+    <br/>
+    
+    <button onClick="mad()"> Go Mad! </button>
+    <p id = "madlib"></p>
+    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

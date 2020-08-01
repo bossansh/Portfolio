@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+    
+    
+    <head>
+        <style>
+            .size {
+                height: 30vh;
+            }
+            body {
+                text-align: center;
+            }
+            #button {
+                text-align: center;
+                height: 70px;
+                width: 100px;
+                background-color: aqua
+            }
+                 
+           
+       
+       
+       
+        </style>
+       
+       
+   
+        <script>
+            var topCounter = 0;
+            var bottomCounter = 0;
+            var shirts = ["Boys/shirt2.png", "Boys/shirt3.png", "Boys/shirt4.jpg"];
+            var pants = ["Boys/pant2.jpg", "Boys/pant1.jpg", "Boys/pant3.jpg", "Boys/pant4.jpg"];
+           
+            function nexttop(){
+                topCounter = topCounter + 1
+                if(topCounter == 3)(
+                    topCounter = 0
+                )
+               
+                document.getElementById("top").src = shirts[topCounter];
+            }
+               
+            function nextbottom(){
+                 bottomCounter = bottomCounter + 1
+                 if(bottomCounter == 4)(
+                    bottomCounter = 0
+                 )
+                document.getElementById("bottom").src = pants[bottomCounter]
+            }
+            function getRandomIntInclusive(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive
+            }
+            function randomize(){
+                var randomNumberTop = getRandomIntInclusive(0,2);
+                var randomNumberBottom = getRandomIntInclusive(0,3);
+                 document.getElementById("top").src = shirts[randomNumberTop];
+                 document.getElementById("bottom").src = pants[randomNumberBottom];
+            }
+
+               
+               
+           
+       
+       
+       
+       
+       
+        </script>
+   
+   
+   
+   
+   
+   
+   
+    </head>
+   
+    <body>
+     <img id="top" class="size" src="Boys/shirt2.png">
+     <button onclick="nexttop()">next</button>
+     
+     <br>
+     
+     <img id="bottom" class="size" src="Boys/pant1.jpg">
+     <button onclick="nextbottom()">next</button>
+       
+     <br>
+       
+     <button id = "button" onclick=randomize()>Browse</button>
+       
+     
+       
+     
+     
+</body>
+
+</html>
